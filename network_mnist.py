@@ -15,8 +15,11 @@ Y_validation, Y_test = np.split(to_categorical(Y_test_raw), 2)
 
 model = Sequential()
 model.add(Dense(1200, activation='sigmoid'))
+model.add(BatchNormalization())
 model.add(Dense(500, activation='sigmoid'))
+model.add(BatchNormalization())
 model.add(Dense(200, activation='sigmoid'))
+model.add(BatchNormalization())
 model.add(Dense(10, activation='softmax'))
 
 model.compile(loss='categorical_crossentropy',
