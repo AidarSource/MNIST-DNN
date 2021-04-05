@@ -4,6 +4,7 @@ from keras.layers import Dense
 from keras.optimizers import SGD
 from keras.utils import to_categorical
 from keras.datasets import mnist
+from keras.layers import BatchNormalization
 import losses
 
 (X_train_raw, Y_train_raw), (X_test_raw, Y_test_raw) = mnist.load_data()
